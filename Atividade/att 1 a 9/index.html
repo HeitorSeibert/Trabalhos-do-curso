@@ -1,0 +1,209 @@
+<!-- //Atividade 1 
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function verificarNumero() {
+    var numero = parseFloat(prompt("Digite um número:")); // Solicita ao usuário que digite um número e converte para um valor de ponto flutuante
+
+    if (numero > 0) {
+        alert("Valor positivo");
+    } else if (numero < 0) {
+        alert("Valor negativo");
+    } else {
+        alert("Valor igual a zero");
+    }
+}
+</script>
+
+<button onclick="verificarNumero()">Verificar Número</button>
+
+</body>
+</html> -->
+
+<!-- //Atividade 2
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabuada</title>
+    <script>
+        function exibirTabuada() {
+            var num = parseInt(prompt("Digite um número para ver sua tabuada:"));
+            var resultado = document.getElementById("resultado");
+            resultado.innerHTML = ""; // Limpa o resultado anterior
+            for (var i = 0; i <= 10; i++) {
+                var linha = num + " x " + i + " = " + (num * i) + "<br>";
+                resultado.innerHTML += linha; // Adiciona a linha ao resultado
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <button onclick="exibirTabuada()">Exibir Tabuada</button>
+    <h2 id="resultado"></h2>
+</body>
+</html> -->
+
+<!-- // Atividade 3 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cálculo de Fatorial</title>
+    <script>
+        function calcularFatorial() {
+            var numero = parseInt(prompt("Digite um número inteiro positivo:"));
+            var fatorial = 1;
+
+            // Verifica se o número é válido
+            if (isNaN(numero) || numero < 0) {
+                alert("Por favor, digite um número inteiro positivo.");
+                return;
+            }
+
+            // Calcula o fatorial
+            for (var i = 1; i <= numero; i++) {
+                fatorial *= i;
+            }
+
+            // Exibe o resultado na página
+            document.getElementById("resultado").innerHTML = "O fatorial de " + numero + " é: " + fatorial;
+        }
+    </script>
+</head>
+<body>
+    <h1>Cálculo de Fatorial</h1>
+    <button onclick="calcularFatorial()">Calcular Fatorial</button>
+    <p id="resultado"></p>
+</body>
+</html> -->
+
+
+
+<!-- //atividade 6
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function compararValores() {
+  var a = prompt("Digite um numero para A:");
+  var b = prompt("Digite um numero para B:");
+  var mensagem = "";
+
+  if (a > b) {
+    mensagem = "A é maior que B";
+  } else if (a < b) {
+    mensagem = "A é menor que B";
+  } else {
+    mensagem = "A é igual a B";
+  }
+
+  alert(mensagem);
+}
+
+compararValores();
+    </script>
+</body>
+</html> -->
+
+<!-- //atividade 7
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcularMedia() {
+  var notas = [];
+  notas.push(parseFloat(prompt("Digite a primeira nota:")));
+  notas.push(parseFloat(prompt("Digite a segunda nota:")));
+  notas.push(parseFloat(prompt("Digite a terceira nota:")));
+
+  var soma = 0;
+  for (var i = 0; i < notas.length; i++) {
+    soma += notas[i];
+  }
+
+  var media = soma / notas.length;
+
+  if (media >= 6) {
+    alert("Aprovado!");
+  } else {
+    alert("Reprovado!");
+  }
+}
+
+calcularMedia();
+
+    </script>
+</body>
+</html> -->
+
+<!-- //atividade 8
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function verificarIdade() {
+  var nome = prompt("Qual é o seu nome?");
+  var idade = prompt("Qual é a sua idade?");
+  
+  if (idade >= 18) {
+    alert(nome + " é maior de 18 e tem " + idade + " anos");
+  } else {
+    alert(nome + " é menor de 18 e tem " + idade + " anos");
+  }
+}
+
+verificarIdade();
+    </script>
+</body>
+</html> -->
+
+<!-- //atividade 9 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function lerMes() {
+  var meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho','Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+  var numero = prompt("Digite um número de 1 a 12:");
+  
+  if (numero >= 1 && numero <= 12) {
+    var mes = meses[numero - 1];
+    alert(mes);
+    return mes;
+  } else {
+    alert("Não existe mês com esse número.");
+    return "Intervalo inválido";
+  }
+}
+
+lerMes();
+    </script>
+</body>
+</html> -->
